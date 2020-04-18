@@ -4,32 +4,35 @@
 
 org 100h
 
-NOP      
+NOP
+
+L0:MOV AX, 00000h
+L2:MOV DS, AX   
+L3:MOV BX, 00000h  
+L4:MOV BYTE PTR [BX], 2h
+    
+L5:MOV AX, 0F000h
+L6:MOV DS, AX
+L7:MOV BX, 0FFFFh
+L8:MOV BYTE PTR [BX], 3h   ;In this section we are Storing Data for Test    
         
-MOV AX,0000H
-MOV DS,AX
-MOV BX,0000H
-MOV AL,BYTE PTR DS:[BX]
-MOV CL,AL
+L9:MOV AX,0000H            
+L10:MOV DS,AX               ; Storing First Memory Location Segment Part In DS 
+L11:MOV BX,0000H            ; Storing First Memory Location Offset Part In BX 
+L12:MOV AL,BYTE PTR DS:[BX] ; Taking the Value From First MEmory Location Into AL 
+L13:MOV CL,AL               ; Storing the value from AL to CL for preventing Data loss
 
-MOV AX,0F000H
-MOV DS,AX
-MOV BX,0FFFFH
-MOV AL,BYTE PTR DS:[BX]
-MOV CH,AL
+L14:MOV AX,0F000H 
+L15:MOV DS,AX               ; Storing LAST Memory Location Segment Part In DS
+L16:MOV BX,0FFFFH           ; Storing Last Memory Location Offset Part In BX
+L17:MOV AL,BYTE PTR DS:[BX] ; Taking the Value From Last Memory Location Into AL
+L18:MOV CH,AL               ; Storing the value from AL to CH for preventing Data loss
 
-ADD CH,CL
+L19:ADD CH,CL               ; Adding CH and Cl and storing it in CH
 
-MOV AL,CH
+L20:MOV AL,CH               ; Storing the reasult in AL from CL for storing purpose
 
-OUT 0FEH,AL
+L21:OUT 0FEH,AL             ; Storing the reasult in Last Fixed Address from AL
 
 END
-
-
-
 ret
-
-
-
-

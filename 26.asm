@@ -4,7 +4,13 @@
 
 org 100h
 
-; add your code here
+NOP
+    
+MOV CL, 13H
+
+OR CL, 0AAh  ; change the ODDLY indexed bits of AL
+
+END
 
 ret
 

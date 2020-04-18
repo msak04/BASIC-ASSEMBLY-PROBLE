@@ -4,7 +4,13 @@
 
 org 100h
 
-; add your code here
+NOP
+    
+MOV BL, 0E3H
+
+OR BL, 01h  ; set the lsb of BL register
+OR BL, 80h  ; set the msb of BL register
+END
 
 ret
 

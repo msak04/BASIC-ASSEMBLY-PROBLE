@@ -6,19 +6,26 @@ org 100h
 
 NOP
 
-MOV DX,0000H
-IN AL,DX
-MOV CH,AL
+MOV AX, 04h
+MOV DX, 00000h
+OUT DX, AX  
 
-MOV DX,0FFFFH
-IN AL,DX
-MOV CL,AL
+MOV DX, 0FFFFh
+OUT DX, AX      ;In this section we are Storing Data for Test 
 
-ADD CL,CH
+MOV DX,0000H    ; Storing First Variable Port Address in DX
+IN AL,DX        ; Storing Valu from First Variable port address in AL
+MOV CH,AL       ; Storing Value From AL to CH
 
-MOV AL,CL  
+MOV DX,0FFFFH   ; Storing Last Variable Port Address in DX
+IN AL,DX        ; Storing Valu from Last Variable port address in AL
+MOV CL,AL       ; Storing Value From AL to CL
 
-OUT 0FEH,AL 
+ADD CL,CH       ; Add CH & CL and Store it in CL
+
+MOV AL,CL       ; Storing reasult from CL to AL for writing purpose
+
+OUT 0FEH,AL     ; Writing the reasult to Last Even Fixed Port Address
 
 END
 ret

@@ -4,10 +4,21 @@
 
 org 100h
 
-; add your code here
+NOP    
+MOV AX,0FFFFH 
+MOV BX,0FFFFH;In this section we are Storing Data for Test     
+
+ADD AX,BX
+
+JO SO 
+
+MOV CX,AX
+JMP QUIT
+
+SO:
+MOV DX,AX 
+
+QUIT:
+END  
 
 ret
-
-
-
-

@@ -4,7 +4,13 @@
 
 org 100h
 
-; add your code here
+NOP
+    
+MOV BL, 13H
+
+XOR BL, 80h  ; change the sign bit of BL
+
+END
 
 ret
 
