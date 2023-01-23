@@ -1,4 +1,4 @@
-# BASIC-ASSEMBLY-PROBLEM
+# BASIC-ASSEMBLY-PROBLEM-AND-SOLUTION
 
 ## Problem List
 01. Read two data (1 byte) from the last and first memory location of MPU 8086 and store their sum in the last even memory location of MPU 8086.
