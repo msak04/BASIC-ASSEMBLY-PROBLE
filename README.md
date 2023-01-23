@@ -1,15 +1,15 @@
 # BASIC-ASSEMBLY-PROBLEM
 
 ## Problem List
-1. Read two data (1 byte) from the last and first memory location of MPU 8086 and store their sum in the last even memory location of MPU 8086.
-2. Read two numbers (1 byte) from the first two memory location of a fixed port address and write the result in the last memory location of MPU 8086.
-3. Read two data (1 byte) from the last and first memory location of MPU 8086 and write their sum in the last even memory location of a fixed port address.
-4. Read two data (1 byte) from the last and first memory location of a variable port address and write their sum in the last even memory location of a fixed port address.
-5. Read three numbers (1 byte) from three consecutive memory locations of MPU 8086 and write the result in a variable port address (any).
-6. Read two data from the last and first memory location of MPU 8086 and store their sum in the last even memory location of MPU 8086, if the sum is greater than 5.
-7. Read two data from the last and first memory location of MPU 8086 and perform the subtraction operation. Store the result in the last memory location of a variable port address if the result is positive, otherwise store in the first memory location of a fixed port address.
-8. Read two positive numbers from two consecutive memory location of MPU 8086 and store the larger number in a fixed port address.
-9. Read the data using AL register and check whether it’s positive or negative.
+01. Read two data (1 byte) from the last and first memory location of MPU 8086 and store their sum in the last even memory location of MPU 8086.
+02. Read two numbers (1 byte) from the first two memory location of a fixed port address and write the result in the last memory location of MPU 8086.
+03. Read two data (1 byte) from the last and first memory location of MPU 8086 and write their sum in the last even memory location of a fixed port address.
+04. Read two data (1 byte) from the last and first memory location of a variable port address and write their sum in the last even memory location of a fixed port address.
+05. Read three numbers (1 byte) from three consecutive memory locations of MPU 8086 and write the result in a variable port address (any).
+06. Read two data from the last and first memory location of MPU 8086 and store their sum in the last even memory location of MPU 8086, if the sum is greater than 5.
+07. Read two data from the last and first memory location of MPU 8086 and perform the subtraction operation. Store the result in the last memory location of a variable port address if the result is positive, otherwise store in the first memory location of a fixed port address.
+08. Read two positive numbers from two consecutive memory location of MPU 8086 and store the larger number in a fixed port address.
+09. Read the data using AL register and check whether it’s positive or negative.
 10. Read the data using CL register and check whether it’s odd or even.
 11. Read the data using AL register and check whether it’s palindrome or not.
 12. Read the data using BL register from the last memory location of MPU 8086 and count the number of 1’s in BL register.
